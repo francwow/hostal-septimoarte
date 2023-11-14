@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import Provider from "@/components/Provider";
 import ScrollTop from "@/components/ScrollTop";
 import Whatsapp from "@/components/Whatsapp";
+import ScrollNav from "@/components/ScrollNav";
 
 export const metadata: Metadata = {
   title: "Hostal Sep7imo Arte - Vive una estadía de película",
@@ -23,6 +24,7 @@ export default function RootLayout({
         <body>
           <ScrollTop />
           <Whatsapp />
+          <ScrollNav />
           {children}
         </body>
       </Provider>

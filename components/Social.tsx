@@ -1,4 +1,4 @@
-import { Instagram, Tiktok } from "./Icons";
+import { Facebook, Instagram } from "./Icons";
 
 const Social = () => {
   return (
@@ -7,7 +7,7 @@ const Social = () => {
         <Instagram />
       </div>
       <div className="icon-container">
-        <Tiktok />
+        <Facebook />
       </div>
     </div>
   );

@@ -82,7 +82,7 @@ const About = () => {
               </div>
             </div>
             <div className="page-link">
-              <Link href="/reservas">
+              <Link href="/contacto">
                 <span className="page-link-copy">
                   <strong>trabajemos juntos</strong>
                 </span>

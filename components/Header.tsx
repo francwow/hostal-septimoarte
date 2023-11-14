@@ -24,7 +24,7 @@ const Header = () => {
       <div className="header">
         <div className="logo-container">
           <h2 className="logo">
-            <Link onClick={() => handleLogo} href={"/"}>
+            <Link onClick={handleLogo} href={"/"}>
               Hostal Sep7imo Arte
             </Link>
           </h2>
