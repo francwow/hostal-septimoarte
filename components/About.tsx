@@ -6,6 +6,8 @@ import Image from "next/image";
 import Header from "./Header";
 import MobileNav from "./MobileNav";
 import Link from "next/link";
+import MainBtn from "./MainBtn";
+import Footer from "./Footer";
 
 const About = () => {
   // const { ref: aboutDesc, inView: descInView } = useInView({
@@ -23,11 +25,7 @@ const About = () => {
             <div className="about-content-container">
               <div className="about-hero-container">
                 <div className="about-heading">
-                  <h2>
-                    David Tuta es un fotógrafo y creador de experiencias
-                    audiovisuales colombiano, actualmente vive en Bogotá,
-                    Colombia.
-                  </h2>
+                  <h2>Hostal Sép7imo Arte</h2>
                 </div>
                 <div className="about-hero-img">
                   <Image src={img} alt={""} width={600} height={600} priority />
@@ -81,14 +79,7 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <div className="page-link">
-              <Link href="/contacto">
-                <span className="page-link-copy">
-                  <strong>trabajemos juntos</strong>
-                </span>
-                <span className="material-symbols-outlined">arrow_forward</span>
-              </Link>
-            </div>
+            <MainBtn btnText="Reservar" />
           </div>
         </div>
       </div>

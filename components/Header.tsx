@@ -3,6 +3,7 @@
 import Social from "./Social";
 import Link from "next/link";
 import useNavActive from "../context/NavContext";
+import Logo from "./Logo";
 
 const Header = () => {
   const { navActive, setNavActive } = useNavActive();
@@ -22,13 +23,7 @@ const Header = () => {
   return (
     <div className="header-wrapper">
       <div className="header">
-        <div className="logo-container">
-          <h2 className="logo">
-            <Link onClick={handleLogo} href={"/"}>
-              Hostal Sep7imo Arte
-            </Link>
-          </h2>
-        </div>
+        <Logo color="black" />
         <div className="burger-container">
           <button
             onClick={handleBurger}

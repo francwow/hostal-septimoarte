@@ -14,7 +14,7 @@ const Whatsapp = () => {
         <Link
           target="_blank"
           href={
-            "https://wa.me/573132335432?text=Hola%20Hostal%20Sep7imo%20Arte"
+            "https://wa.me/573197521741?text=Hola%20Hostal%20Sep7imo%20Arte"
           }
         >
           <Image src={whatsappLogo} alt="Whatsapp logo" priority />

@@ -5,6 +5,7 @@ import Provider from "@/components/Provider";
 import ScrollTop from "@/components/ScrollTop";
 import Whatsapp from "@/components/Whatsapp";
 import ScrollNav from "@/components/ScrollNav";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Hostal Sep7imo Arte - Vive una estadía de película",
