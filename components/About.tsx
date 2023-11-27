@@ -77,9 +77,9 @@ const About = () => {
                   semper. Nullam egestas sem id tortor pellentesque semper eget
                   in sapien. Nam vestibulum nisi nec libero.
                 </p>
+                <MainBtn btnText="Reservar" />
               </div>
             </div>
-            <MainBtn btnText="Reservar" />
           </div>
         </div>
       </div>

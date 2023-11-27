@@ -39,7 +39,7 @@ const InicioSlider = () => {
     <div className="inicio-bg-slider">
       <div className="inicio-slider-info">
         <h2>Vive una estadía de película</h2>
-        <MainBtn btnText="Reserva" />
+        <MainBtn btnText="Reservar" />
       </div>
       <div className="bg-fade"></div>
       {carouselImages.map((item) => {

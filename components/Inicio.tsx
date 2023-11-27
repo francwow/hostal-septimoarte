@@ -20,23 +20,30 @@ const Inicio = () => {
         <div className="content-wrapper">
           <div className="inicio-intro">
             <h2>Bienvenidos al Hostal Sep7imo Arte</h2>
-            <p>
-              El HOSTAL SEP7IMO ARTE se encuentra ubicado a 10 minutos del
-              terminal de transporte de Salitre y del Aeropuerto Internacional
-              El Dorado. Tiene una ubicación muy central cerca de lugares
-              turísticos como el centro de la ciudad, el estadio Nemesio Camacho
-              el Campin, el Parque interactivo Maloka, el Jardín Botánico, el
-              Museo del oro, entre otros. Además, en sus alrededores se pueden
-              encontrar bares, restaurantes y discotecas.
-              <br />
-              <br />
-              El Hostal busca resaltar la historia del Cine y la Televisión en
-              Colombia y el mundo para así crear una experiencia diferente de
-              hospedaje. Aquí encontrarás una estadía tranquila, llena de arte y
-              comodidad. Nuestras cámaras, luces y utilería estan listas para
-              recibir a las estrellas!!!
-            </p>
-            <div className="inicio-intro-img">
+            <div className="inicio-intro-info">
+              <div className="inicio-intro-bg">
+                <div className="inicio-intro-filter"></div>
+              </div>
+              <p>
+                El HOSTAL SEP7IMO ARTE se encuentra ubicado a 10 minutos del
+                terminal de transporte de Salitre y del Aeropuerto Internacional
+                El Dorado. Tiene una ubicación muy central cerca de lugares
+                turísticos como el centro de la ciudad, el estadio Nemesio
+                Camacho el Campin, el Parque interactivo Maloka, el Jardín
+                Botánico, el Museo del oro, entre otros. Además, en sus
+                alrededores se pueden encontrar bares, restaurantes y
+                discotecas.
+                <br />
+                <br />
+                El Hostal busca resaltar la historia del Cine y la Televisión en
+                Colombia y el mundo para así crear una experiencia diferente de
+                hospedaje. Aquí encontrarás una estadía tranquila, llena de arte
+                y comodidad. Nuestras cámaras, luces y utilería estan listas
+                para recibir a las estrellas!!!
+              </p>
+            </div>
+
+            {/* <div className="inicio-intro-img">
               <Image
                 src={introImg.src}
                 alt="foto de bar en el Hostal Septimo Arte."
@@ -44,7 +51,7 @@ const Inicio = () => {
                 width={600}
                 priority
               />
-            </div>
+            </div> */}
           </div>
           <InfoComponentContainer />
           <Amenities amenitiesArr={amenities} />

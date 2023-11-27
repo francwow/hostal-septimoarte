@@ -13,9 +13,6 @@ const Contact = () => {
         <Header />
         <div className="content-container">
           <div className="contact-info-container">
-            <div className="contact-copy">
-              <h2>Contacto</h2>
-            </div>
             <GoogleMap />
             <HostelInfo />
             <Social />

@@ -26,10 +26,10 @@ const HostelInfo = () => {
             cra 80b # 24d - 45, Fontibón, Bogotá
           </li>
         </Link>
-        <Link target="_blank" href={"mailto:francwow06@gmail.com"}>
+        <Link target="_blank" href={"mailto:hostal7imoarte@gmail.com"}>
           <li>
             <span className="material-symbols-outlined">mail</span>
-            correo
+            hostalsep7imoarte@gmail.com
           </li>
         </Link>
       </ul>

@@ -45,7 +45,12 @@ h3,
 h4,
 h5,
 h6 {
+  border-radius: 5px;
   font-family: var(--font-heading);
+}
+
+h2 {
+  width: 100%;
 }
 
 li {
@@ -72,7 +77,7 @@ a {
 
 .content-wrapper {
   padding: 10px;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: auto;
   overflow-x: hidden;
 }
@@ -164,25 +169,29 @@ a {
 .main-btn-container,
 .secondary-btn-container {
   text-align: center;
-  margin: 5px;
+  width: 100%;
 }
 
 .main-btn-container a {
-  border-radius: 100vw;
+  border-radius: 5px;
   padding: 10px 20px;
   background-color: var(--color-orange);
   color: white;
   font-family: var(--font-text);
   font-size: 1.2rem;
+  width: 100%;
+  display: block;
 }
 
 .secondary-btn-container a {
-  border-radius: 100vw;
+  border-radius: 5px;
   padding: 10px 20px;
   background-color: var(--color-blue);
   color: var(--color-white);
   font-family: var(--font-text);
   font-size: 1rem;
+  width: 100%;
+  display: block;
 }
 
 .component-container {
@@ -353,6 +362,7 @@ a {
   justify-content: center;
   align-items: center;
   gap: 35px;
+  padding: 20px 30px;
 }
 
 .inicio-slider-info h2 {
@@ -374,6 +384,7 @@ a {
   justify-content: center;
   flex-direction: column;
   gap: 10px;
+  margin-bottom: 50px;
 }
 
 .inicio-bg-item {
@@ -444,17 +455,55 @@ a {
 
 .inicio-intro {
   color: var(--color-dark);
+  background-color: var(--color-red);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin: 40px 0;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
-.inicio-intro-img {
+.inicio-intro-info {
+  position: relative;
+  z-index: 99;
+}
+
+.inicio-intro-info p {
+  color: var(--color-white);
+}
+
+.inicio-intro-bg {
+  background-image: url("../assets/webpImages/img4.webp");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+}
+
+.inicio-intro-filter {
+  position: absolute;
+  inset: 0;
+  background-color: transparent;
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 25, 33, 0.77) 0%,
+    rgba(0, 25, 33, 1) 100%
+  );
+  opacity: 1;
+  mix-blend-mode: multiply;
+}
+
+/* .inicio-intro-img {
   max-width: 500px;
   align-self: center;
 }
+
+.inicio-intro-img img {
+  border-radius: 5px;
+} */
 
 .inicio-intro h2 {
   display: block;
@@ -465,7 +514,6 @@ a {
   text-align: center;
   font-weight: 500;
   line-height: 45px;
-  background-color: var(--color-orange);
   color: var(--color-white);
 }
 
@@ -481,8 +529,9 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 15px;
-  margin: 20px 0;
+  gap: 40px;
+  margin-top: 50px;
+  margin-bottom: 15px;
 }
 
 .info-component-container h2 {
@@ -495,8 +544,7 @@ a {
   text-align: center;
   font-weight: 500;
   line-height: 45px;
-  background-color: var(--color-orange);
-  color: var(--color-white);
+  color: var(--color-dark);
 }
 
 .info-component {
@@ -505,6 +553,8 @@ a {
   height: calc(400px + 10vw);
   display: flex;
   flex-direction: column;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .info-component .bg-fade {
@@ -553,6 +603,7 @@ a {
 
 .amenities-grid {
   max-width: 100%;
+  border-radius: 5px;
   display: grid;
   gap: 10px 5px;
   padding: 10px;
@@ -602,6 +653,9 @@ a {
   transform: translate3d(0, 150px, 0);
 }
 
+.about-content-wrapper {
+}
+
 .about-content-wrapper .main-btn-container a {
   color: white;
 }
@@ -626,6 +680,10 @@ a {
 
 .about-hero-container {
   animation: fade-in-left 1s ease forwards;
+  background-color: var(--color-red);
+  height: 100%;
+  overflow: hidden;
+  border-radius: 5px;
 }
 
 .about-heading h2 {
@@ -638,16 +696,17 @@ a {
   text-align: center;
   font-weight: 500;
   line-height: 45px;
-  background-color: var(--color-orange);
   color: var(--color-white);
 }
 
 .about-hero-img {
-  padding: 15px;
   margin: auto;
   opacity: 0;
   animation: fade-in forwards 0.5s ease;
   animation-delay: 0.5s;
+}
+
+.about-hero-img img {
 }
 
 .about-description {
@@ -659,6 +718,7 @@ a {
   opacity: 0;
   transform: translate3d(0, 5%, 0);
   transition: all 1s ease;
+  margin-bottom: 40px;
 }
 
 .in-view {
@@ -702,20 +762,6 @@ a {
   margin-top: 5vw;
 }
 
-.contact-info-container h2 {
-  align-self: flex-start;
-  display: block;
-  font-family: var(--font-heading);
-  font-size: 2.5rem;
-  margin: 10px 0;
-  padding: 20px;
-  text-align: center;
-  font-weight: 500;
-  line-height: 45px;
-  background-color: var(--color-orange);
-  color: var(--color-white);
-}
-
 .contact-info-container .google-map iframe {
   height: 250px;
 }
@@ -729,6 +775,7 @@ a {
   align-items: flex-start;
   gap: 5px;
   animation: fade-in-left 1s forwards ease;
+  width: 100%;
 }
 
 .contact-info a {
@@ -738,11 +785,6 @@ a {
 .contact-info-container .social-container {
   margin: 20px 0;
   align-self: flex-start;
-}
-
-.contact-copy h2 {
-  font-family: var(--font-text);
-  font-size: 1.8rem;
 }
 
 .contact-copy p {
@@ -767,6 +809,14 @@ a {
 .contact-info-container .social-container .icon-container {
   height: 30px;
   width: 30px;
+}
+
+.contact-info-container .footer-info-container {
+  background-color: var(--color-dark);
+}
+
+.contact-info-container .footer-info-container li {
+  color: var(--color-white);
 }
 
 /* <MobileNav /> */
@@ -863,7 +913,7 @@ a {
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
-  min-height: 700px;
+  min-height: 850px;
   padding: 10px;
   background-color: var(--color-dark);
   color: white;
@@ -874,9 +924,9 @@ a {
 }
 
 .footer-grid {
-  max-width: 1700px;
+  width: 100%;
   margin: auto;
-  height: fit-content;
+  height: 100%;
   display: grid;
   gap: 15px;
   grid-template-columns: 1fr;
@@ -903,6 +953,7 @@ a {
 
 .footer-info-container {
   padding: 10px;
+  border-radius: 5px;
   width: 100%;
   height: 100%;
   display: flex;
@@ -923,6 +974,7 @@ a {
   justify-content: center;
   align-items: center;
   gap: 5px;
+  padding: 10px;
 }
 
 .google-map-container {
@@ -941,17 +993,58 @@ a {
 
 .google-map iframe {
   width: 100%;
-  height: 250px;
+  height: 300px;
+  border-radius: 5px;
 }
 
 /* media queries */
 @media screen and (min-width: 991px) {
   /* general-styles */
+  h2 {
+    width: auto;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  .scroll-up-btn {
+    position: fixed;
+    bottom: 40px;
+    left: 40px;
+  }
+
+  .scroll-up-btn .material-symbols-outlined {
+    font-size: 2.6rem;
+  }
+
   .whatsapp {
     bottom: 40px;
     right: 40px;
     width: 50px;
     height: 50px;
+  }
+
+  .main-btn-container a {
+    margin: auto;
+    border-radius: 100vw;
+    max-width: 300px;
+    padding: 10px 20px;
+    background-color: var(--color-orange);
+    color: white;
+    font-family: var(--font-text);
+    font-size: 1.5rem;
+  }
+
+  .secondary-btn-container a {
+    margin: auto;
+    border-radius: 100vw;
+    max-width: 300px;
+    padding: 10px 20px;
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    font-family: var(--font-text);
+    font-size: 1.2rem;
   }
 
   /* <Header /> */
@@ -982,10 +1075,40 @@ a {
     overflow: hidden;
   }
 
+  .inicio-slider-info h2 {
+    font-size: 3.5rem;
+  }
+
+  .inicio-intro h2 {
+    font-size: 2.7rem;
+  }
+
   .info-bg-container {
     position: absolute;
     inset: 0;
     z-index: -1;
+  }
+
+  .inicio-intro-info {
+    height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .inicio-intro-info p {
+    max-width: 900px;
+    margin: auto;
+  }
+
+  .info-component-container {
+    margin-top: 100px;
+    margin-bottom: 30px;
+  }
+
+  .info-component-container h2 {
+    font-size: 2.7rem;
   }
 
   .info-component-bg {
@@ -1004,6 +1127,14 @@ a {
   .info-component-cta {
     width: 45%;
     margin-bottom: 50px;
+  }
+
+  .info-component-cta h3 {
+    font-size: 1.8rem;
+  }
+
+  .info-component-cta p {
+    font-size: 1.1rem;
   }
 
   .amenities-grid {
@@ -1029,7 +1160,7 @@ a {
   }
 
   .about-heading h2 {
-    font-size: 2.2rem;
+    font-size: 2.7rem;
   }
 
   .about-hero-img {
@@ -1083,8 +1214,8 @@ a {
 
   /* <Footer /> */
   .footer {
-    min-height: auto;
-    height: fit-content;
+    min-height: 400px;
+    padding: 20px;
   }
 
   .footer-grid {
