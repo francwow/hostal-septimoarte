@@ -20,20 +20,21 @@ const InicioSlider = () => {
   //   }
   // }
 
-  function increaseIndex() {
-    if (index < carouselImages.length - 1) {
-      setIndex(index + 1);
-    } else {
-      setIndex(initialState);
-    }
-  }
-
   useEffect(() => {
+    function increaseIndex() {
+      if (index < carouselImages.length - 1) {
+        setIndex(index + 1);
+      } else {
+        setIndex(initialState);
+      }
+      console.log(index);
+    }
+
     const startCarousel = setInterval(function () {
       increaseIndex();
     }, 4000);
     return () => clearInterval(startCarousel);
-  });
+  }, [index]);
 
   return (
     <div className="inicio-bg-slider">

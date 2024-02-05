@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Icon from "./GoogleIcon";
+import Social from "./Social";
 
 const HostelInfo = () => {
   return (
@@ -11,7 +13,7 @@ const HostelInfo = () => {
           }
         >
           <li>
-            <span className="material-symbols-outlined">call</span>
+            <Icon icon="call" />
             +57 3197521741
           </li>
         </Link>
@@ -22,17 +24,18 @@ const HostelInfo = () => {
           }
         >
           <li>
-            <span className="material-symbols-outlined">location_on</span>
+            <Icon icon="location_on" />
             cra 80b # 24d - 45, Fontibón, Bogotá
           </li>
         </Link>
         <Link target="_blank" href={"mailto:hostal7imoarte@gmail.com"}>
           <li>
-            <span className="material-symbols-outlined">mail</span>
+            <Icon icon="mail" />
             hostalsep7imoarte@gmail.com
           </li>
         </Link>
       </ul>
+      <Social />
     </div>
   );
 };

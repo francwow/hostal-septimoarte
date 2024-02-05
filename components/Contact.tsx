@@ -15,7 +15,6 @@ const Contact = () => {
           <div className="contact-info-container">
             <GoogleMap />
             <HostelInfo />
-            <Social />
           </div>
         </div>
       </div>

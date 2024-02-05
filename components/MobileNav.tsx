@@ -5,9 +5,10 @@ import Header from "./Header";
 import Social from "./Social";
 import Link from "next/link";
 import { useMediaQuery } from "usehooks-ts";
+import { useEffect } from "react";
 
 const MobileNav = () => {
-  const deskTop = useMediaQuery("(min-width: 961px)");
+  const deskTop = useMediaQuery("(min-width: 991px)");
   const { navActive, setNavActive } = useNavActive();
 
   function handleLinkClick() {
@@ -15,6 +16,16 @@ const MobileNav = () => {
       setNavActive(!navActive);
     }
   }
+
+  useEffect(() => {
+    if (typeof window !== undefined) {
+      if (navActive) {
+        window.document.documentElement.style.overflowY = "hidden";
+      } else if (!navActive) {
+        window.document.documentElement.style.overflowY = "scroll";
+      }
+    }
+  }, [navActive]);
 
   return (
     <div

@@ -8,8 +8,10 @@ import InfoComponent from "./InfoComponent";
 const InfoComponentContainer = () => {
   return (
     <div className="component-container">
-      <div className="info-component-container">
+      <div className="info-component-h2">
         <h2>Conoce nuestras habitaciones</h2>
+      </div>
+      <div className="info-component-container">
         <InfoComponent
           bgImg={room1Img.src}
           headingText="Cameraman's room"

@@ -20,13 +20,13 @@ const About = () => {
       <div className="about-wrapper">
         <MobileNav />
         <Header />
-        <div className="content-container">
+        <div className="content-wrapper">
           <div className="about-content-wrapper">
             <div className="about-content-container">
               <div className="about-hero-container">
-                <div className="about-heading">
+                {/* <div className="about-heading">
                   <h2>Hostal Sép7imo Arte</h2>
-                </div>
+                </div> */}
                 <div className="about-hero-img">
                   <Image src={img} alt={""} width={600} height={600} priority />
                 </div>

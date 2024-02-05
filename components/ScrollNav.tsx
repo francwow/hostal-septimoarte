@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useScrollDirection } from "@/hooks/useScrollDirection";
 import Link from "next/link";
+import Icon from "./GoogleIcon";
 
 const ScrollNav = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -37,7 +38,7 @@ const ScrollNav = () => {
     return (
       <aside className="scroll-up-btn">
         <Link href="#">
-          <span className="material-symbols-outlined">stat_1</span>
+          <Icon icon="stat_1" />
         </Link>
       </aside>
     );
