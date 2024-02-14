@@ -4,9 +4,12 @@ import Social from "./Social";
 import Link from "next/link";
 import useNavActive from "../context/NavContext";
 import Logo from "./Logo";
+import Languages from "./Languages";
+import useLanguage from "@/context/LanguageContext";
 
 const Header = () => {
   const { navActive, setNavActive } = useNavActive();
+  const { languageActive } = useLanguage();
 
   function handleBurger() {
     setNavActive(!navActive);
@@ -38,12 +41,17 @@ const Header = () => {
             <ul className="nav-list">
               <li>
                 <Link onClick={() => handleLogo} href={"/"}>
-                  Home
+                  {languageActive === "ES" ? "Inicio" : "Home"}
+                </Link>
+              </li>
+              <li>
+                <Link onClick={() => handleLogo} href={"/habitaciones"}>
+                  {languageActive === "ES" ? "Habitaciones" : "Rooms"}
                 </Link>
               </li>
               <li>
                 <Link onClick={() => handleLogo} href={"/acerca"}>
-                  Acerca
+                  {languageActive === "ES" ? "Acerca" : "About"}
                 </Link>
               </li>
               <li>
@@ -54,10 +62,11 @@ const Header = () => {
                     query: {},
                   }}
                 >
-                  Contacto
+                  {languageActive === "ES" ? "Contacto" : "Contact"}
                 </Link>
               </li>
             </ul>
+            <Languages />
             <Social />
           </nav>
         </div>

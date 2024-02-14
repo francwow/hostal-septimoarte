@@ -6,17 +6,26 @@ const HostelInfo = () => {
   return (
     <div className="footer-info-container">
       <ul className="footer-info">
-        <Link
-          target="_blank"
-          href={
-            "https://wa.me/573197521741?text=Hola%20Hostal%20Sep7imo%20Arte"
-          }
-        >
-          <li>
-            <Icon icon="call" />
+        <li>
+          <Icon icon="call" />
+          <Link
+            target="_blank"
+            href={
+              "https://wa.me/573197521741?text=Hola%20Hostal%20Sep7imo%20Arte"
+            }
+          >
             +57 3197521741
-          </li>
-        </Link>
+          </Link>
+          <Link
+            target="_blank"
+            href={
+              "https://wa.me/573197521741?text=Hola%20Hostal%20Sep7imo%20Arte"
+            }
+          >
+            +57 3132335432
+          </Link>
+        </li>
+
         <Link
           target="_blank"
           href={

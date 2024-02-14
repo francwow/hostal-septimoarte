@@ -9,18 +9,18 @@ const ScrollNav = () => {
   const [scrolled, setScrolled] = useState(false);
   const scrollDirection = useScrollDirection();
 
-  function scrollTop() {
-    if (typeof window !== undefined) {
-      let scrollY = window.scrollY;
-      if (scrollY >= 300) {
-        setScrolled(true);
-      } else if (scrollY <= 299) {
-        setScrolled(false);
+  useEffect(() => {
+    function scrollTop() {
+      if (typeof window !== undefined) {
+        let scrollY = window.scrollY;
+        if (scrollY >= 300) {
+          setScrolled(true);
+        } else if (scrollY <= 299) {
+          setScrolled(false);
+        }
       }
     }
-  }
 
-  useEffect(() => {
     if (typeof window !== undefined) {
       window.addEventListener("scroll", scrollTop);
     }

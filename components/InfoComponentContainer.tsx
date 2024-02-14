@@ -1,56 +1,82 @@
+"use client";
+
 import room1Img from "@/assets/webpImages/img20.webp";
 import room2Img from "@/assets/webpImages/img18.webp";
 import room3Img from "@/assets/webpImages/img26.webp";
 import room4Img from "@/assets/webpImages/img22.webp";
-import room5Img from "@/assets/webpImages/img19.webp";
+import room5Img from "@/assets/webpImages/hab-2.webp";
 import InfoComponent from "./InfoComponent";
+import { useInView } from "react-intersection-observer";
+import useLanguage from "@/context/LanguageContext";
 
 const InfoComponentContainer = () => {
+  const { languageActive } = useLanguage();
+
+  const { ref: containerRef, inView: containerInView } = useInView({
+    threshold: 0.7,
+    triggerOnce: true,
+  });
+
   return (
     <div className="component-container">
-      <div className="info-component-h2">
-        <h2>Conoce nuestras habitaciones</h2>
+      <div
+        ref={containerRef}
+        style={{ opacity: "0" }}
+        className={
+          containerInView
+            ? "info-component-h2 fade-in-view"
+            : "info-component-h2"
+        }
+      >
+        <h2>
+          {languageActive === "ES" ? "NUESTRAS HABITACIONES" : "OUR ROOMS"}
+        </h2>
       </div>
       <div className="info-component-container">
         <InfoComponent
           bgImg={room1Img.src}
-          headingText="Cameraman's room"
-          pText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-    mattis sem eget enim pretium, eget blandit velit accumsan. Vivamus
-    efficitur augue diam."
-          btnText="Reservar"
+          headingTextES="Habitación de camarógrafos"
+          headingTextEN="Cameramen's room"
+          pTextES="La habitación de camarógrafos ofrece una cama sencilla, dotada con escritorio, muebles y demás accesorios para brindar la máxima comodidad. El baño es de uso compartido."
+          pTextEN="The cameramen's room offers a single bed, equipped with a desk, furniture and other accessories to provide maximum comfort. The bathroom is shared."
+          btnTextES="Reservar"
+          btnTextEN="Book Now"
         />
         <InfoComponent
           bgImg={room2Img.src}
-          headingText="Actor's room"
-          pText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-    mattis sem eget enim pretium, eget blandit velit accumsan. Vivamus
-    efficitur augue diam."
-          btnText="Reservar"
+          headingTextES="Habitación de actores"
+          headingTextEN="Actors room"
+          pTextES="Las habitaciones dobles cuentan con dos posibles acomodaciones: cama matrimonial o camas separadas individuales. Están dotadas con escritorio, silla e iluminación adecuada para el trabajo, además cuentan con todas las comodidades y un excelente baño."
+          pTextEN="The double rooms have two possible accommodations: double bed or separate single beds. They are equipped with a desk, chair and adequate lighting for work, and they also have all the necessary items for a comfortable stay and an excellent bathroom."
+          btnTextES="Reservar"
+          btnTextEN="Book Now"
         />
         <InfoComponent
           bgImg={room3Img.src}
-          headingText="Director's room"
-          pText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-    mattis sem eget enim pretium, eget blandit velit accumsan. Vivamus
-    efficitur augue diam."
-          btnText="Reservar"
+          headingTextES="Habitación de directores"
+          headingTextEN="Directors room"
+          pTextES="Las habitaciones dobles cuentan con dos posibles acomodaciones: cama matrimonial o camas separadas individuales. Están dotadas con escritorio, silla e iluminación adecuada para el trabajo, además cuentan con todas las comodidades y un excelente baño."
+          pTextEN="The double rooms have two possible accommodations: double bed or separate single beds. They are equipped with a desk, chair and adequate lighting for work, and they also have all the necessary items for a comfortable stay and an excellent bathroom."
+          btnTextES="Reservar"
+          btnTextEN="Book Now"
         />
         <InfoComponent
           bgImg={room4Img.src}
-          headingText="Producer's room"
-          pText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-    mattis sem eget enim pretium, eget blandit velit accumsan. Vivamus
-    efficitur augue diam."
-          btnText="Reservar"
+          headingTextES="Habitación de productores"
+          headingTextEN="Producers room"
+          pTextES="Las habitaciones dobles cuentan con dos posibles acomodaciones: cama matrimonial o camas separadas individuales. Están dotadas con escritorio, silla e iluminación adecuada para el trabajo, además cuentan con todas las comodidades y un excelente baño."
+          pTextEN="The double rooms have two possible accommodations: double bed or separate single beds. They are equipped with a desk, chair and adequate lighting for work, and they also have all the necessary items for a comfortable stay and an excellent bathroom."
+          btnTextES="Reservar"
+          btnTextEN="Book Now"
         />
         <InfoComponent
           bgImg={room5Img.src}
-          headingText="Production assistants room"
-          pText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-    mattis sem eget enim pretium, eget blandit velit accumsan. Vivamus
-    efficitur augue diam."
-          btnText="Reservar"
+          headingTextES="Habitación de asistentes de producción"
+          headingTextEN="Production assistants room"
+          pTextES="La habitación de camarógrafos ofrece una cama sencilla, dotada con escritorio, muebles y demás accesorios para brindar la máxima comodidad. El baño es de uso compartido."
+          pTextEN="The production assistants room offers a single bed, equipped with a desk, furniture and other accessories to provide maximum comfort. The bathroom is shared."
+          btnTextES="Reservar"
+          btnTextEN="Book Now"
         />
       </div>
     </div>

@@ -1,14 +1,21 @@
+"use client";
+
+import { useEffect } from "react";
 import GoogleMap from "./GoogleMap";
 import Header from "./Header";
 import HostelInfo from "./HostelInfo";
 import MobileNav from "./MobileNav";
-import Social from "./Social";
-import Link from "next/link";
 
 const Contact = () => {
+  useEffect(() => {
+    if (typeof window !== undefined) {
+      window.document.body.style.overflowY = "hidden";
+    }
+  }, []);
+
   return (
-    <div className="main-wrapper">
-      <div className="contact-wrapper">
+    <div className="contact-wrapper">
+      <div className="main-wrapper">
         <MobileNav />
         <Header />
         <div className="content-container">

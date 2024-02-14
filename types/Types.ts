@@ -1,8 +1,8 @@
-export type LanguageType = string;
+export type LanguageType = "EN" | "ES";
 
 export type LanguageContextType = {
   languageActive: LanguageType;
-  setLanguageActive: (languageActive: string) => void;
+  setLanguageActive: (languageActive: LanguageType) => void;
 };
 
 export type NavActiveType = boolean;

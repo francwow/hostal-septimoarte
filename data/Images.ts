@@ -1,10 +1,10 @@
-import img1 from "@/assets/webpImages/img1.webp";
-import img2 from "@/assets/webpImages/bed.webp";
-import img3 from "@/assets/webpImages/bogota.webp";
-import img4 from "@/assets/webpImages/breakfast.webp";
+import img1 from "@/assets/webpImages/bar-1.webp";
+import img2 from "@/assets/webpImages/hab-1.webp";
+import img3 from "@/assets/webpImages/bogota1.webp";
+import img4 from "@/assets/webpImages/food-2.webp";
 import img5 from "@/assets/webpImages/bed2.webp";
 import img6 from "@/assets/webpImages/sauna.webp";
-import img7 from "@/assets/webpImages/wine.webp";
+import img7 from "@/assets/webpImages/terraza-1.webp";
 
 export const carouselImages = [
   { src: img1, id: 0 },

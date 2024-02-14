@@ -6,17 +6,19 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className="component-container footer-container">
-      <footer className="footer">
-        <div className="footer-grid">
-          <Logo color="white" />
-          <div className="google-map-container">
-            <GoogleMap />
+    <div className="footer-container">
+      <div className="component-container">
+        <footer className="footer">
+          <div className="footer-grid">
+            <Logo color="white" />
+            <div className="google-map-container">
+              <GoogleMap />
+            </div>
+            <HostelInfo />
+            <Social />
           </div>
-          <HostelInfo />
-          <Social />
-        </div>
-      </footer>
+        </footer>
+      </div>
     </div>
   );
 };

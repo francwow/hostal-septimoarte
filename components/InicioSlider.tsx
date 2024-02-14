@@ -3,12 +3,19 @@
 import { useState, useEffect } from "react";
 import { carouselImages } from "@/data/Images";
 import Image from "next/image";
-import Link from "next/link";
 import MainBtn from "./MainBtn";
+import { useInView } from "react-intersection-observer";
+import useLanguage from "@/context/LanguageContext";
 
 const InicioSlider = () => {
+  const { languageActive } = useLanguage();
+
   const initialState = 0;
   const [index, setIndex] = useState<number>(initialState);
+  const { ref: containerRef, inView: containerInView } = useInView({
+    threshold: 0.7,
+    triggerOnce: true,
+  });
 
   // function handleHover(e: React.MouseEvent) {
   //   if ((e.target as Element).innerHTML === "AUDIOVISUAL") {
@@ -27,7 +34,6 @@ const InicioSlider = () => {
       } else {
         setIndex(initialState);
       }
-      console.log(index);
     }
 
     const startCarousel = setInterval(function () {
@@ -38,9 +44,21 @@ const InicioSlider = () => {
 
   return (
     <div className="inicio-bg-slider">
-      <div className="inicio-slider-info">
-        <h2>Vive una estadía de película</h2>
-        <MainBtn btnText="Reservar" />
+      <div
+        ref={containerRef}
+        style={{ opacity: "0" }}
+        className={
+          containerInView
+            ? "inicio-slider-info fade-in-view"
+            : "inicio-slider-info"
+        }
+      >
+        <h2>
+          {languageActive === "ES"
+            ? "VIVE UNA ESTADIA DE PELICULA"
+            : "ENJOY A CINEMATIC EXPERIENCE"}
+        </h2>
+        <MainBtn btnTextES="Reservar" btnTextEN="Book Now" />
       </div>
       <div className="bg-fade"></div>
       {carouselImages.map((item) => {

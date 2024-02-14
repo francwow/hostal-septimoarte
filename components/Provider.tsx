@@ -6,7 +6,7 @@ import { NavActiveType, LanguageType } from "../types/Types";
 import { LanguageContext } from "@/context/LanguageContext";
 
 const Provider = (props: PropsWithChildren) => {
-  const [languageActive, setLanguageActive] = useState<LanguageType>("ESP");
+  const [languageActive, setLanguageActive] = useState<LanguageType>("ES");
   const [navActive, setNavActive] = useState<NavActiveType>(false);
 
   return (

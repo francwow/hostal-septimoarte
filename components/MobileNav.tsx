@@ -6,10 +6,14 @@ import Social from "./Social";
 import Link from "next/link";
 import { useMediaQuery } from "usehooks-ts";
 import { useEffect } from "react";
+import Languages from "./Languages";
+import useLanguage from "@/context/LanguageContext";
 
 const MobileNav = () => {
   const deskTop = useMediaQuery("(min-width: 991px)");
   const { navActive, setNavActive } = useNavActive();
+
+  const { languageActive } = useLanguage();
 
   function handleLinkClick() {
     if (navActive) {
@@ -41,21 +45,27 @@ const MobileNav = () => {
         <ul className="mobile-list">
           <li className={navActive ? "fade-up" : ""}>
             <Link onClick={handleLinkClick} href={"/"}>
-              Home
+              {languageActive === "ES" ? "Inicio" : "Home"}
+            </Link>
+          </li>
+          <li className={navActive ? "fade-up" : ""}>
+            <Link onClick={handleLinkClick} href={"/habitaciones"}>
+              {languageActive === "ES" ? "Habitaciones" : "Rooms"}
             </Link>
           </li>
           <li className={navActive ? "fade-up" : ""}>
             <Link onClick={handleLinkClick} href={"/acerca"}>
-              Acerca
+              {languageActive === "ES" ? "Acerca" : "About"}
             </Link>
           </li>
           <li className={navActive ? "fade-up" : ""}>
             <Link onClick={handleLinkClick} href={"/contacto"}>
-              Contacto
+              {languageActive === "ES" ? "Contacto" : "Contact"}
             </Link>
           </li>
         </ul>
       </nav>
+      <Languages />
     </div>
   );
 };
