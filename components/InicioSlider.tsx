@@ -22,7 +22,6 @@ const InicioSlider = () => {
     if (typeof window !== undefined) {
       window.addEventListener("scroll", (e) => {
         setTranslateY(window.scrollY / 10);
-        console.log(translateY);
       });
     }
   }, [translateY]);

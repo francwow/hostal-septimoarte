@@ -166,6 +166,7 @@ i.symbol {
 .es,
 .en {
   padding: 5px;
+  font-size: 1.2rem;
   color: rgb(220, 220, 220);
 }
 

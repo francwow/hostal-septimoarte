@@ -8,6 +8,7 @@ import img2 from "@/assets/webpImages/sala.webp";
 
 const InicioIntro = () => {
   const { languageActive } = useLanguage();
+
   const { ref: containerRef, inView: containerInView } = useInView({
     threshold: 0.3,
     triggerOnce: true,
@@ -72,6 +73,7 @@ const InicioIntro = () => {
                     priority
                     width={700}
                     height={700}
+                    placeholder="blur"
                   />
                 </div>
               </div>
@@ -96,6 +98,7 @@ const InicioIntro = () => {
                     priority
                     width={700}
                     height={700}
+                    placeholder="blur"
                   />
                 </div>
                 <p>
