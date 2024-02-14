@@ -9,6 +9,7 @@ import useLanguage from "@/context/LanguageContext";
 
 const InicioSlider = () => {
   const { languageActive } = useLanguage();
+  const [translateY, setTranslateY] = useState(0);
 
   const initialState = 0;
   const [index, setIndex] = useState<number>(initialState);
@@ -17,15 +18,14 @@ const InicioSlider = () => {
     triggerOnce: true,
   });
 
-  // function handleHover(e: React.MouseEvent) {
-  //   if ((e.target as Element).innerHTML === "AUDIOVISUAL") {
-  //     setIndex(0);
-  //   } else if ((e.target as Element).innerHTML === "FOTOGRAFÍA") {
-  //     setIndex(1);
-  //   } else if ((e.target as Element).innerHTML === "UFX") {
-  //     setIndex(2);
-  //   }
-  // }
+  useEffect(() => {
+    if (typeof window !== undefined) {
+      window.addEventListener("scroll", (e) => {
+        setTranslateY(window.scrollY / 10);
+        console.log(translateY);
+      });
+    }
+  }, [translateY]);
 
   useEffect(() => {
     function increaseIndex() {
@@ -46,19 +46,29 @@ const InicioSlider = () => {
     <div className="inicio-bg-slider">
       <div
         ref={containerRef}
-        style={{ opacity: "0" }}
+        style={{
+          opacity: "0",
+        }}
         className={
           containerInView
             ? "inicio-slider-info fade-in-view"
             : "inicio-slider-info"
         }
       >
-        <h2>
-          {languageActive === "ES"
-            ? "VIVE UNA ESTADIA DE PELICULA"
-            : "ENJOY A CINEMATIC EXPERIENCE"}
-        </h2>
-        <MainBtn btnTextES="Reservar" btnTextEN="Book Now" />
+        <div
+          style={{
+            transform: `translate3d(0,-${translateY}px, 0)`,
+            transition: "0.1s ease all",
+          }}
+          className="slider-info-container"
+        >
+          <h2>
+            {languageActive === "ES"
+              ? "VIVE UNA ESTADIA DE PELICULA"
+              : "ENJOY A CINEMATIC EXPERIENCE"}
+          </h2>
+          <MainBtn btnTextES="Reservar" btnTextEN="Book Now" />
+        </div>
       </div>
       <div className="bg-fade"></div>
       {carouselImages.map((item) => {

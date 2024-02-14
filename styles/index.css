@@ -450,6 +450,14 @@ i.symbol {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.slider-info-container {
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 35px;
   padding: 20px 0;
 }
