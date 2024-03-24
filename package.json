@@ -1,5 +1,5 @@
 {
-  "name": "hostal-septimoarte",
+  "name": "hostal-septimoarte-nextjs",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,8 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "form-data": "^4.0.0",
     "imagemin": "^8.0.1",
     "imagemin-webp": "^8.0.0",
+    "mailgun.js": "^10.2.1",
     "material-symbols": "^0.14.6",
     "next": "latest",
     "normalize.css": "^8.0.1",
