@@ -85,7 +85,6 @@ i.symbol {
 }
 
 .main-wrapper {
-  min-height: 100vh;
   position: relative;
   animation: fade-in both ease 1s;
   /* background-color: var(--color-orange); */
@@ -816,6 +815,113 @@ i.symbol {
 .rooms-wrapper .es.es-active,
 .rooms-wrapper .en.en-active {
   color: var(--color-dark);
+}
+
+/* <Menu /> */
+.menu-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.menu-wrapper .main-wrapper {
+  background-color: var(--color-red);
+}
+
+.menu-wrapper .header-wrapper {
+  background-color: var(--color-white);
+}
+
+.menu-wrapper a {
+  color: black;
+}
+
+.menu-wrapper .line-one,
+.menu-wrapper .line-two {
+  background-color: var(--color-dark);
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: rgb(255, 237, 214);
+  box-shadow: 0px 3px 10px 5px rgba(0, 0, 0, 0.4);
+}
+
+.menu-section {
+  width: 100%;
+  padding: 1rem 0.5rem;
+}
+
+.menu-main-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  width: 100%;
+  padding: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: rgb(82, 82, 137);
+  text-shadow: 2.4px 2.7px 2px rgba(0, 0, 0, 1);
+}
+
+.menu-heading {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-red);
+  border-top: 1px solid var(--color-red);
+  border-bottom: 1px solid var(--color-red);
+  text-transform: uppercase;
+  position: relative;
+}
+
+.menu-heading h2 {
+  width: fit-content;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-heading h2::after,
+.menu-heading h2::before {
+  content: "";
+  position: relative;
+  top: 50%;
+  display: inline-block;
+  margin: 0 0.5rem;
+  width: 10px;
+  height: 2px;
+  background-color: var(--color-red);
+}
+
+.menu-item {
+  display: flex;
+  padding: 0.2rem 0.5rem;
+  margin: 1rem 0;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  font-size: 0.8rem;
+}
+
+.item-desc {
+  flex-basis: 55%;
+}
+
+.item-price {
+  font-style: italic;
 }
 
 /* <About /> */
@@ -1630,6 +1736,87 @@ form label {
   }
 
   .amenities-item h3 {
+    font-size: 1rem;
+  }
+
+  /* <Rooms /> */
+
+  /* <Menu /> */
+  .menu-wrapper {
+    width: 100%;
+    position: relative;
+  }
+
+  .menu-wrapper .main-wrapper {
+    background-color: var(--color-red);
+  }
+
+  .menu-wrapper .header-wrapper {
+    background-color: var(--color-white);
+  }
+
+  .menu-wrapper a {
+    color: black;
+  }
+
+  .menu-wrapper .line-one,
+  .menu-wrapper .line-two {
+    background-color: var(--color-dark);
+  }
+
+  .menu-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgb(255, 237, 214);
+    box-shadow: 0px 3px 10px 5px rgba(0, 0, 0, 0.4);
+  }
+
+  .menu-section {
+    width: 100%;
+    padding: 1rem 0.5rem;
+  }
+
+  .menu-main-heading {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    width: 100%;
+    padding: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    color: rgb(82, 82, 137);
+    text-shadow: 2.4px 2.7px 2px rgba(0, 0, 0, 1);
+  }
+
+  .menu-heading {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-red);
+    border-top: 1px solid var(--color-red);
+    border-bottom: 1px solid var(--color-red);
+    text-transform: uppercase;
+    position: relative;
+  }
+
+  .menu-item {
+    display: flex;
+    padding: 0.2rem 0.5rem;
+    margin: 1rem 0;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
     font-size: 1rem;
   }
 

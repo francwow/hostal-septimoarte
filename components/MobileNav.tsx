@@ -54,6 +54,11 @@ const MobileNav = () => {
             </Link>
           </li>
           <li className={navActive ? "fade-up" : ""}>
+            <Link onClick={handleLinkClick} href={"/menu"}>
+              {languageActive === "ES" ? "Menu" : "Menu"}
+            </Link>
+          </li>
+          <li className={navActive ? "fade-up" : ""}>
             <Link onClick={handleLinkClick} href={"/acerca"}>
               {languageActive === "ES" ? "Acerca" : "About"}
             </Link>

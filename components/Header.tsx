@@ -50,6 +50,11 @@ const Header = () => {
                 </Link>
               </li>
               <li>
+                <Link onClick={() => handleLogo} href={"/menu"}>
+                  {languageActive === "ES" ? "Menu" : "Menu"}
+                </Link>
+              </li>
+              <li>
                 <Link onClick={() => handleLogo} href={"/acerca"}>
                   {languageActive === "ES" ? "Acerca" : "About"}
                 </Link>
