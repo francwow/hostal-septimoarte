@@ -166,7 +166,7 @@ i.symbol {
 .en {
   padding: 5px;
   font-size: 1.2rem;
-  color: rgb(220, 220, 220);
+  color: rgb(156, 156, 156);
 }
 
 .mobile-nav-container .es,
@@ -345,7 +345,6 @@ i.symbol {
   left: 0;
   right: 0;
   z-index: 999;
-  padding: 10px;
 }
 
 .header-wrapper {
@@ -685,7 +684,7 @@ i.symbol {
   color: var(--color-dark);
 }
 
-/* .info-component-h2::after {
+.info-component-h2::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -694,7 +693,7 @@ i.symbol {
   top: 90%;
   left: 0;
   right: 0;
-} */
+}
 
 .info-component {
   position: relative;
@@ -838,6 +837,11 @@ i.symbol {
 .menu-wrapper .line-one,
 .menu-wrapper .line-two {
   background-color: var(--color-dark);
+}
+
+.menu-wrapper .es.es-active,
+.menu-wrapper .en.en-active {
+  color: var(--color-dark);
 }
 
 .menu-container {
