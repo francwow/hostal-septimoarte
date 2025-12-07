@@ -11,15 +11,15 @@ const HostelInfo = () => {
           <Link
             target="_blank"
             href={
-              "https://wa.me/573197521741?text=Hola%20Hostal%20Sep7imo%20Arte"
+              "https://wa.me/573102036381?text=Hola%20Hostal%20Sep7imo%20Arte"
             }
           >
-            +57 3197521741
+            +57 3102036381
           </Link>
           <Link
             target="_blank"
             href={
-              "https://wa.me/573197521741?text=Hola%20Hostal%20Sep7imo%20Arte"
+              "https://wa.me/573132335432?text=Hola%20Hostal%20Sep7imo%20Arte"
             }
           >
             +57 3132335432
